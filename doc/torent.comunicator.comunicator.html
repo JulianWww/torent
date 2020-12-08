@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>torent.comunicator.comunicator : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            torent API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code>torent.comunicator.comunicator</code> <small>class documentation</small></h1>
+
+        <span id="partOf">
+          Part of <code><a href="torent.html" class="code" data-type="Package">torent</a>.<a href="torent.comunicator.html" class="code" data-type="Module">comunicator</a></code>
+          
+          <a href="classIndex.html#torent.comunicator.comunicator">(View In Hierarchy)</a>
+        </span>
+      </div>
+
+      <div class="extrasDocstring">
+        
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>the basic comunicator</p><p>will be used by more advanced comunicators to comunicate with one another basicly averything that habpens on the server and the client related to socket</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id5">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="torent.comunicator.comunicator.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>construct the comunicator</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="torent.comunicator.comunicator.html#port" class="code" data-type="Instance Variable">port</a></td>
+    <td><span>witch port to operate on</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="torent.comunicator.comunicator.html#name" class="code" data-type="Instance Variable">name</a></td>
+    <td><span>the uuid of the instance if None server Generated</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="torent.comunicator.comunicator.html#sockData" class="code" data-type="Instance Variable">sockData</a></td>
+    <td><span>a tuple containing the the sockets protocol and the sockType</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="torent.comunicator.comunicator.html#connections" class="code" data-type="Instance Variable">connections</a></td>
+    <td><span>a dict containing the socket connections of the comunicator by uuid</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="torent.comunicator.comunicator.html#logger" class="code" data-type="Instance Variable">logger</a></td>
+    <td><span>the logger used to log activity made this class</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="torent.comunicator.comunicator.html#listeningThread" class="code" data-type="Instance Variable">listeningThread</a></td>
+    <td><span>the thread used to listen for connections</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="torent.comunicator.comunicator.html#buffer" class="code" data-type="Instance Variable">buffer</a></td>
+    <td><span>the buffersize for socket recv</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="torent.comunicator.comunicator.html#data" class="code" data-type="Instance Variable">data</a></td>
+    <td><span>who is data updated</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="torent.comunicator.comunicator.html#addDataPoint" class="code" data-type="Method">addDataPoint</a></td>
+    <td><span>adds a new data point</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="torent.comunicator.comunicator.html#assertInit" class="code" data-type="Method">assertInit</a></td>
+    <td><span>make sure instance is initated</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="torent.comunicator.comunicator.html#__str__" class="code" data-type="Method">__str__</a></td>
+    <td><span>convert to string currently prints its name</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="torent.comunicator.comunicator.html#start_listen" class="code" data-type="Method">start_listen</a></td>
+    <td><span>listens for client connections called by the server</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="torent.comunicator.comunicator.html#setListenActivity" class="code" data-type="Method">setListenActivity</a></td>
+    <td><span>sets the activity of the listening thread</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="torent.comunicator.comunicator.html#connect" class="code" data-type="Method">connect</a></td>
+    <td><span>connect to a new master</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="torent.comunicator.comunicator.html#send" class="code" data-type="Method">send</a></td>
+    <td><span>send data to all clients</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="torent.comunicator.comunicator.html#updateVar" class="code" data-type="Method">updateVar</a></td>
+    <td><span>update a value</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="torent.comunicator.comunicator.html#getOtherConections" class="code" data-type="Method">getOtherConections</a></td>
+    <td><span>tells server to run functon on this client with all the ips as arguments</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="torent.comunicator.comunicator.html#_initiated" class="code" data-type="Instance Variable">_initiated</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="torent.comunicator.comunicator.html#_log_info" class="code" data-type="Method">_log_info</a></td>
+    <td><span>make an info call to self.logger</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="torent.comunicator.comunicator.html#_log_warn" class="code" data-type="Method">_log_warn</a></td>
+    <td><span>make an warn  call to self.logger</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="torent.comunicator.comunicator.html#_updateData" class="code" data-type="Method">_updateData</a></td>
+    <td><span>run update function</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="torent.comunicator.comunicator.html#_encriptData" class="code" data-type="Method">_encriptData</a></td>
+    <td><span>get data to be serialized</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="torent.comunicator.comunicator.html#_torent_getClientInit" class="code" data-type="Method">_torent_getClientInit</a></td>
+    <td><span>run function with all conected ips as addreses</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="torent.comunicator.comunicator.html#_connectToNewConectors" class="code" data-type="Method">_connectToNewConectors</a></td>
+    <td><span>run by _torent_getClientInit to initate all the clients not contained in this client conection dict</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseinstancevariable private">
+  
+  <a name="torent.comunicator.comunicator._initiated">
+    
+  </a>
+  <a name="_initiated">
+    
+  </a>
+  <div class="functionHeader">
+    _initiated =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="torent.comunicator.comunicator.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, port, protocol=socket.AF_INET, sockType=socket.SOCK_STREAM, proto=0, name=None, log=None, bufferSize=2048):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>construct the comunicator</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">port</td><td>witch port the sockets are crated with (type: int)</td></tr><tr><td></td><td class="fieldArg">protocol</td><td>These constants represent the address (and protocol) families, used for the first argument to socket(). If the AF_UNIX constant is not defined then this protocol is unsupported. More constants may be available depending on the system. (type: socket.AF_INET, socket.AF_INET6, socket.AF_UNIX, AF_CAN, AF_PACKET, or AF_RDS.)</td></tr><tr><td></td><td class="fieldArg">sockType</td><td>These constants represent the socket types, used for the second argument to socket(). More constants may be available depending on the system. (Only SOCK_STREAM and SOCK_DGRAM appear to be generally useful.) (type: socket.SOCK_STREAM, socket.SOCK_DGRAM, socket.SOCK_RAW, socket.SOCK_RDM, socket.SOCK_SEQPACKET)</td></tr><tr><td></td><td class="fieldArg">proto</td><td>The protocol number is usually zero and may be omitted or in the case where the address family is AF_CAN the protocol should be one of CAN_RAW, CAN_BCM, CAN_ISOTP or CAN_J1939. (type: socket.constant)</td></tr><tr><td></td><td class="fieldArg">name</td><td>the name of the communicator will be used by other istances to reference this one if None (default) the server will construct a unique one (type: str)</td></tr><tr><td></td><td class="fieldArg">log</td><td>the logger used to log proceses made by the comunicator (type: loggging.logger)</td></tr><tr><td></td><td class="fieldArg">bufferSize</td><td>the buffersize for recv data (type: int)</td></tr></table></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="torent.comunicator.comunicator.port">
+    
+  </a>
+  <a name="port">
+    
+  </a>
+  <div class="functionHeader">
+    port =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>witch port to operate on</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="torent.comunicator.comunicator.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>the uuid of the instance if None server Generated</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="torent.comunicator.comunicator.sockData">
+    
+  </a>
+  <a name="sockData">
+    
+  </a>
+  <div class="functionHeader">
+    sockData =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>a tuple containing the the sockets protocol and the sockType</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="torent.comunicator.comunicator.connections">
+    
+  </a>
+  <a name="connections">
+    
+  </a>
+  <div class="functionHeader">
+    connections =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>a dict containing the socket connections of the comunicator by uuid</p><p>uuid is the unike unit id aka the id used by the name of the connected communicator</p></div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="torent.comunicator.comunicator.logger">
+    
+  </a>
+  <a name="logger">
+    
+  </a>
+  <div class="functionHeader">
+    logger =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>the logger used to log activity made this class</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="torent.comunicator.comunicator.listeningThread">
+    
+  </a>
+  <a name="listeningThread">
+    
+  </a>
+  <div class="functionHeader">
+    listeningThread =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>the thread used to listen for connections</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="torent.comunicator.comunicator.buffer">
+    
+  </a>
+  <a name="buffer">
+    
+  </a>
+  <div class="functionHeader">
+    buffer =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>the buffersize for socket recv</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="torent.comunicator.comunicator.data">
+    
+  </a>
+  <a name="data">
+    
+  </a>
+  <div class="functionHeader">
+    data =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>who is data updated</p><p>a dict refrencing torent names and function to update python variables</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="torent.comunicator.comunicator.addDataPoint">
+    
+  </a>
+  <a name="addDataPoint">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    addDataPoint(self, key, val, **specification):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>adds a new data point</p><p>adds datapoint with internal name key and value val</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">val</td><td>the function to be executed when value is changed this schould set val to whatever u want (type: function)</td></tr><tr><td></td><td class="fieldArg">key</td><td>the internal name of the val (type: string)</td></tr><tr><td></td><td class="fieldArg">specification</td><td>a dict containing execution specification<p>built in opions are: "propergate": propergate call to all clients</p></td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="torent.comunicator.comunicator.assertInit">
+    
+  </a>
+  <a name="assertInit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertInit(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>make sure instance is initated</p><p>make sure we initated the instance</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="torent.comunicator.comunicator._log_info">
+    
+  </a>
+  <a name="_log_info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _log_info(self, msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>make an info call to self.logger</p><p>Logs a message with level DEBUG on this logger. The msg is the message format string, and the args are the arguments which are merged into msg using the string formatting operator. (Note that this means that you can use keywords in the format string, together with a single dictionary argument.) No % formatting operation is performed on msg when no args are supplied.</p><p>There are four keyword arguments in kwargs which are inspected: exc_info, stack_info, stacklevel and extra.</p><p>see https://docs.python.org/3/library/logging.html logger.debug for details</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="torent.comunicator.comunicator._log_warn">
+    
+  </a>
+  <a name="_log_warn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _log_warn(self, msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>make an warn  call to self.logger</p><p>Logs a message with level DEBUG on this logger. The msg is the message format string, and the args are the arguments which are merged into msg using the string formatting operator. (Note that this means that you can use keywords in the format string, together with a single dictionary argument.) No % formatting operation is performed on msg when no args are supplied.</p><p>There are four keyword arguments in kwargs which are inspected: exc_info, stack_info, stacklevel and extra.</p><p>see https://docs.python.org/3/library/logging.html logger.debug for details</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="torent.comunicator.comunicator.__str__">
+    
+  </a>
+  <a name="__str__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __str__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>convert to string currently prints its name</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="torent.comunicator.comunicator.start_listen">
+    
+  </a>
+  <a name="start_listen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    start_listen(self, func=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>listens for client connections called by the server</p><p>will run in a Thread listen for connections ad add them to the connection dict</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">func</td><td>the function we want to run with parameter client when a new client is connected, if the return of the function is True the client will not be saved, this function is blocking so the connector wont lissen while its running (type: function with 1 parameter)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="torent.comunicator.comunicator.setListenActivity">
+    
+  </a>
+  <a name="setListenActivity">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setListenActivity(self, activity=False):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>sets the activity of the listening thread</p><p>activates or distactivates the listening Thread</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">activity</td><td>if True unlock the thread if false lock it (type: bool)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="torent.comunicator.comunicator.connect">
+    
+  </a>
+  <a name="connect">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    connect(self, ip, func=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>connect to a new master</p><p>crate a conection to a comunicator at ip ip and port self.port</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">ip</td><td>the ip addres of the master (type: string ipadress)</td></tr><tr><td></td><td class="fieldArg">func</td><td>the function we want to run with parameter client when a new client is connected, if the return of the function is True the client will not be saved, this function is blocking so the connector wont lissen while its running (type: function with 1 parameter)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="torent.comunicator.comunicator.send">
+    
+  </a>
+  <a name="send">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    send(self, data, clients=None, blackList=[]):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>send data to all clients</p><p>go throw every client and send data</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">clients</td><td>names of the clients to update if None(defauld) that means all (type: list)</td></tr><tr><td></td><td class="fieldArg">blackList</td><td>what clients not to update under any circumstances (type: list)</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="torent.comunicator.comunicator._updateData">
+    
+  </a>
+  <a name="_updateData">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _updateData(self, key, val, client):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>run update function</p><p>runs the update function data[key] with args val[0] and kwargs val[1]</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">key</td><td>the torent name of the function to be run (type: string)</td></tr><tr><td></td><td class="fieldArg">val</td><td>a list containing a tuple at position 0 and a dict at position 1 containing args and kwargs respectivly (type: list, tuple, dict)</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="torent.comunicator.comunicator.updateVar">
+    
+  </a>
+  <a name="updateVar">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    updateVar(self, key, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>update a value</p><p>run function with torent name key on all possible clients</p><p>note: you may not use clients and blackList as kwargs in your function as they are pased to send see send for more details</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">key</td><td>the torent name of the function to be executed folowed by the parametrs to be passed (type: string)</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="torent.comunicator.comunicator._encriptData">
+    
+  </a>
+  <a name="_encriptData">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _encriptData(self, key, args, kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>get data to be serialized</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="torent.comunicator.comunicator.getOtherConections">
+    
+  </a>
+  <a name="getOtherConections">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getOtherConections(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>tells server to run functon on this client with all the ips as arguments</p><p>this dose only work if ips are diferent otherwise go wire propergation</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="torent.comunicator.comunicator._torent_getClientInit">
+    
+  </a>
+  <a name="_torent_getClientInit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _torent_getClientInit(self, client, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>run function with all conected ips as addreses</p><p>run a function containing the values of the ips adresses conected to it except the client and all in args</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="torent.comunicator.comunicator._connectToNewConectors">
+    
+  </a>
+  <a name="_connectToNewConectors">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _connectToNewConectors(self, client, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>run by _torent_getClientInit to initate all the clients not contained in this client conection dict</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for torent, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2020-12-07 14:18:32.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

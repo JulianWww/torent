@@ -1,0 +1,43 @@
+pydoctor --make-html --html-output=doc --add-package=jpe
+
+
+""
+    @param fun: Objective function to be minimized. or a string in witch case it will be turned into a function
+    @type fun: string
+
+    @type a:   float or function optional
+    @param a:   Interval's lower limit. Defaults to ``-inf`` if it is a function:
+                a is redefined as the output of the function with parameters val
+    .
+    @type b:   float, optional
+    @param b:   Interval's upper limit. Defaults to ``+inf``.
+                if it is a function:
+                b is redefined as the output of the function with parameters val
+
+    @type val:  float, optional
+    @param val: the value the function should have at the end of the serch
+                ie fun(result) = val whereby result is the return of this function
+                defaults to 0
+
+    @type x0:   float or function, optional
+    @param x2:  Initial guess. Defaults to ``None``, which implies that::
+                x0 = a + 0.382 * (b - a)
+                f0 = f(x0)
+                if function x0 will be the result of that function with input (val)
+
+    @type rtol : float
+    @param rtol: Relative tolerance. Defaults to ``1.4902e-08``.
+
+    @type atol : float
+    @param atol: Absolute tolerance. Defaults to ``1.4902e-08``.
+
+    @type maxiter : int
+    @param maxiter: Maximum number of iterations.
+
+    @return:    float\n
+                \t Best guess ``x`` for the minimum of ``f``.\n
+    float\n
+        Value ``f(x)``.\n
+    int
+        \tNumber of iterations performed.\n
+    """

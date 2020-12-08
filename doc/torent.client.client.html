@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>torent.client.client : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            torent API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code>torent.client.client</code> <small>class documentation</small></h1>
+
+        <span id="partOf">
+          Part of <code><a href="torent.html" class="code" data-type="Package">torent</a>.<a href="torent.client.html" class="code" data-type="Module">client</a></code>
+          
+          <a href="classIndex.html#torent.client.client">(View In Hierarchy)</a>
+        </span>
+      </div>
+
+      <div class="extrasDocstring">
+        
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p>a container for sockets and ip addresses at current</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="torent.client.client.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>crates container</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="torent.client.client.html#sock" class="code" data-type="Instance Variable">sock</a></td>
+    <td><span>the socket its connected to</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="torent.client.client.html#ip" class="code" data-type="Instance Variable">ip</a></td>
+    <td><span>the ip the sock is connected to</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="torent.client.client.html#name" class="code" data-type="Instance Variable">name</a></td>
+    <td><span>the name of the client (str)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="torent.client.client.html#send" class="code" data-type="Method">send</a></td>
+    <td><span>send data</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="torent.client.client.html#recv" class="code" data-type="Method">recv</a></td>
+    <td><span>receve data</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="torent.client.client.html#startListening" class="code" data-type="Method">startListening</a></td>
+    <td><span>starts listening for updats</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="torent.client.client.html#listening_Thread" class="code" data-type="Instance Variable">listening_Thread</a></td>
+    <td><span>the thread used to listen for updates</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="torent.client.client.html#getUpdate" class="code" data-type="Method">getUpdate</a></td>
+    <td><span>get updates</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="torent.client.client.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, con, ip, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>crates container</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">con</td><td>the socket to connect to (type: socket.socket)</td></tr><tr><td></td><td class="fieldArg">ip</td><td>the ip addres the sock is connected to (type: int)</td></tr><tr><td></td><td class="fieldArg">name</td><td>the name of the client (type: a string)</td></tr></table></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="torent.client.client.sock">
+    
+  </a>
+  <a name="sock">
+    
+  </a>
+  <div class="functionHeader">
+    sock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>the socket its connected to</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="torent.client.client.ip">
+    
+  </a>
+  <a name="ip">
+    
+  </a>
+  <div class="functionHeader">
+    ip =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>the ip the sock is connected to</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="torent.client.client.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>the name of the client (str)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="torent.client.client.send">
+    
+  </a>
+  <a name="send">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    send(self, data, flags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>send data</p><p>Send data to the socket. The socket must be connected to a remote socket. The optional flags argument has the same meaning as for recv() above. Returns the number of bytes sent. Applications are responsible for checking that all data has been sent; if only some of the data was transmitted, the application needs to attempt delivery of the remaining data. For further information on this topic, consult the Socket Programming HOWTO.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="torent.client.client.recv">
+    
+  </a>
+  <a name="recv">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    recv(self, bufsize, flags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>receve data</p><p>Receive data from the socket. The return value is a bytes object representing the data received. The maximum amount of data to be received at once is specified by bufsize. See the Unix manual page recv(2) for the meaning of the optional argument flags; it defaults to zero.</p><p>Note</p><ul><li>For best match with hardware and network realities, the value of bufsize should be a relatively small power of 2, for example, 4096.</li></ul><p>from: https://docs.python.org/3/library/socket.html#socket-objects</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="torent.client.client.startListening">
+    
+  </a>
+  <a name="startListening">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    startListening(self, fun, bufferSize, flags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>starts listening for updats</p><p>start a jpe_types thread to run self.getUpdate</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">fun</td><td>the function to be run (type: function)</td></tr><tr><td></td><td class="fieldArg">bufferSize</td><td>the size for socket.recv (type: int)</td></tr><tr><td></td><td class="fieldArg">flags</td><td>flags for socket.recv (type: see socket doc)</td></tr></table></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="torent.client.client.listening_Thread">
+    
+  </a>
+  <a name="listening_Thread">
+    
+  </a>
+  <div class="functionHeader">
+    listening_Thread =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p>the thread used to listen for updates</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="torent.client.client.getUpdate">
+    
+  </a>
+  <a name="getUpdate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getUpdate(self, fun, bufferSize, flags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p>get updates</p><p>run in a Thread and will run fun each time it gets an update</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName">Parameters</td><td class="fieldArg">fun</td><td>the function to be run (type: function)</td></tr><tr><td></td><td class="fieldArg">bufferSize</td><td>the size for socket.recv (type: int)</td></tr><tr><td></td><td class="fieldArg">flags</td><td>flags for socket.recv (type: see socket doc)</td></tr></table></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for torent, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> at 2020-12-07 14:18:32.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
