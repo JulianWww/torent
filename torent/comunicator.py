@@ -4,7 +4,7 @@ the class implementation of a variable scharer for python
 """
 import socket, threading, time
 from jpe_types.paralel import LockableThread, threadInharitanceFilter
-from jpe_types.conversions.intager import baseN
+from jpe_types.conversions.intager import baseN, convertTointFrombaseStr
 
 from torent.client import client
 import logging
@@ -252,13 +252,15 @@ class comunicator:
             this_client.startListening(self._updateData, self.buffer)
             self._log_info(f"crated newClient")
 
-    def _getUUID_for_client(self, port):
+    def _getUUID_for_client(self, port=None):
         """generats a uuid for the client
 
         genrate a uuid form id
         """
-        ip = socket.gethostbyname(socket.gethostname())
-        uuid = baseN(int(str(port) + "".join([x.zfill(3) for x in ip.split(".")])), 36)
+        if not isinstance(port, int): port = self.port
+        assert type(port) is int, "plz dont manualy set the port"
+        ip = socket.gethostbyname(socket.gethostname()).replace(".","")
+        uuid = baseN(int(str(port) + ip), 64)
         return uuid
 
     def send(self, data, clients=None, blackList=[]):
@@ -439,6 +441,6 @@ def decriptUUIDname(uuid):
     @type uui: str
      """
     assert isinstance(uuid, str), f"the uuid must be a string not {type(uuid)}"
-    key = str(int(uuid, 36))
+    key = str(convertTointFrombaseStr(uuid, 64))
     ip = str(int(key[-12:-9])) + "." + str(int(key[-9:-6])) + "."+ str(int(key[-6:-3])) + "." + str(int(key[-3:]))
     return ip, int(key[:-12])
